@@ -14,7 +14,7 @@ https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/index.html
 
 上传`oracle-database-preinstall-21c-1.0-1.el7.x86_64.rpm`、`oracle-database-xe-21c-1.0-1.ol8.x86_64.rpm`至/opt目录下
 
-依次执行
+切换至/opt目录下，依次执行
 
 ```bash
 yum -y localinstall oracle-database-preinstall-21c-1.0-1.el7.x86_64.rpm
@@ -67,10 +67,6 @@ lsnrctl start
 
 启动数据库
 
-```
-startup
-```
-
 ```bash
 # 登录sys
 sqlplus sys as sysdba
@@ -109,7 +105,8 @@ SIMPLIFIED CHINESE_CHINA.AL32UTF8
 NLS_LANG="SIMPLIFIED CHINESE_CHINA.AL32UTF8"
 export NLS_LANG
 echo $NLS_LANG
-写入 ~/.bashrc
+3.写入 ~/.bashrc
+4.使生效 source ~/.bashrc
 ```
 
 ### LRM-00109: could not open parameter file '/opt/oracle/dbs/initORCLCDB.ora'
